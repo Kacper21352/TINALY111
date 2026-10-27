@@ -1,0 +1,364 @@
+:root {
+    --bg-color: #f9f8f6;
+    --text-color: #2c2c2c;
+    --accent: #ad896e;
+    --accent-light: #f3efe9;
+    --border-color: #e5e0db;
+    --white: #ffffff;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background-color: var(--bg-color); color: var(--text-color); font-family: var(--font-sans); font-weight: 300; line-height: 1.6; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* HEADER */
+header {
+    position: fixed; top: 0; left: 0; width: 100%;
+    background-color: rgba(249, 248, 246, 0.95);
+    backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 50px; z-index: 1000; border-bottom: 1px solid var(--border-color);
+}
+.tinaly img { height: 35px; }
+nav { display: flex; gap: 30px; }
+nav a { font-size: 0.85rem; font-weight: 500; letter-spacing: 1px; color: var(--text-color); transition: color 0.3s ease; }
+nav a:hover, nav a.active { color: var(--accent); }
+
+.btn {
+    display: inline-block; padding: 12px 28px; background-color: var(--accent); color: var(--white);
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 1.5px; border: 1px solid var(--accent);
+    transition: all 0.3s ease; cursor: pointer; text-align: center;
+}
+.btn:hover { background-color: transparent; color: var(--accent); }
+.btn-outline { background-color: transparent; color: var(--text-color); border-color: var(--text-color); }
+.btn-outline:hover { background-color: var(--text-color); color: var(--white); }
+.btn-full { width: 100%; margin-top: 10px; }
+.menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-color); }
+
+/* HERO */
+.hero-wrapper {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 90px 0 0 50px;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-card {
+    flex: 1;
+    max-width: 520px;
+    z-index: 2;
+    margin: auto 0;
+    padding: 40px 0;
+}
+
+.hero-card h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.hero-line {
+    width: 45px;
+    height: 1px;
+    background-color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.small-title {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 600;
+    display: block;
+}
+
+.hero-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0 35px 0;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.benefits div span {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.benefits div p {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.hero-photo-gradient {
+    position: relative;
+    flex: 1.4;
+    min-height: calc(100vh - 90px);
+    overflow: hidden;
+}
+
+.hero-photo-gradient img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--bg-color) 0%, rgba(249, 248, 246, 0.8) 18%, rgba(249, 248, 246, 0.25) 40%, transparent 70%);
+    pointer-events: none;
+}
+
+/* INSTAGRAM */
+.instagram-strip {
+    background-color: var(--accent-light); padding: 25px 20px; display: flex; justify-content: center; align-items: center; gap: 15px;
+    font-size: 0.85rem; letter-spacing: 1.5px; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);
+}
+.instagram-icon { color: var(--accent); font-size: 1.1rem; }
+
+/* SEKCJE */
+.section { padding: 100px 50px; max-width: 1300px; margin: 0 auto; }
+.section-heading { text-align: center; margin-bottom: 60px; }
+.section-heading h2 { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 400; letter-spacing: 2px; margin-bottom: 15px; }
+.section-heading div { width: 40px; height: 1px; background-color: var(--accent); margin: 0 auto; }
+
+/* NASZ ZESPÓŁ - 5 OSÓB W JEDNYM RZĘDZIE */
+.team {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.person { background: var(--white); border: 1px solid var(--border-color); text-align: left; transition: transform 0.3s ease; }
+.person:hover { transform: translateY(-5px); }
+.person img { width: 100%; height: 280px; object-fit: cover; }
+.person-content { padding: 20px; }
+.person-content h3 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 5px; }
+.person-content h4 { font-size: 0.65rem; letter-spacing: 1.2px; color: var(--accent); margin-bottom: 12px; font-weight: 600; }
+.person-content p { font-size: 0.8rem; color: #666; }
+
+/* OFERTA GRID */
+.offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+.offer-box { background: var(--white); border: 1px solid var(--border-color); padding: 40px; display: flex; gap: 25px; align-items: flex-start; }
+.offer-box span { font-family: var(--font-serif); font-size: 1.5rem; color: var(--accent); }
+.offer-box h3 { font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 10px; font-weight: 500; }
+.offer-box p { font-size: 0.85rem; color: #666; }
+
+/* WNĘTRZE SALONU */
+.salon-section { display: flex; align-items: center; background-color: var(--accent-light); margin: 50px 0; }
+.salon-content { flex: 1; padding: 80px; }
+.salon-label { font-size: 0.75rem; letter-spacing: 2px; color: var(--accent); font-weight: 600; display: block; margin-bottom: 10px; }
+.salon-content h2 { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 400; line-height: 1.2; margin-bottom: 20px; }
+.salon-line { width: 40px; height: 1px; background-color: var(--accent); margin-bottom: 20px; }
+.salon-photo { flex: 1; }
+.salon-photo img { width: 100%; height: 450px; object-fit: cover; }
+
+/* CENNIK */
+.prices { max-width: 900px; }
+.price-person { background: var(--white); border: 1px solid var(--border-color); margin-bottom: 40px; padding: 40px; }
+.price-person-name { border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 30px; }
+.price-person-name span { font-size: 0.75rem; letter-spacing: 2px; color: var(--accent); font-weight: 600; display: block; margin-bottom: 5px; }
+.price-person-name h3 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; }
+.price-group { margin-bottom: 25px; }
+.price-group h4 { font-size: 0.8rem; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 10px; font-weight: 600; }
+.price-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--border-color); font-size: 0.9rem; }
+.price-row strong { font-weight: 500; color: var(--text-color); }
+
+/* NOWA SEKCJA KONTAKT, MAPA I FORMULARZ ZAPISU */
+.contact-map-section { background-color: var(--white); border-top: 1px solid var(--border-color); }
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.map-info-box {
+    background: var(--bg-color);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.address-header h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.address-header .tagline {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.map-container {
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.travel-times h4 {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.travel-times ul {
+    list-style: none;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #555;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.parking-info {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+}
+
+/* FORMULARZ ZAPISU */
+.booking-form-box {
+    background: var(--bg-color);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.booking-form-box h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.booking-form-box p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--accent);
+}
+
+.form-success {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #eaf4ed;
+    color: #2e6930;
+    font-size: 0.85rem;
+    text-align: center;
+    border: 1px solid #c8e6cb;
+}
+
+/* FOOTER */
+footer { background-color: #242424; color: var(--white); padding: 50px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.footer-logo img { height: 30px; filter: brightness(0) invert(1); }
+footer p { font-size: 0.75rem; letter-spacing: 2px; color: #aaa; }
+footer div { display: flex; gap: 25px; }
+footer div a { font-size: 0.75rem; letter-spacing: 1px; color: #ccc; transition: color 0.3s; }
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 1200px) {
+    .team { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+    header { padding: 20px; }
+    nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--white); padding: 20px; border-bottom: 1px solid var(--border-color); box-shadow: 0 10px 20px rgba(0,0,0,0.05); gap: 15px; text-align: center; }
+    nav.active { display: flex; }
+    .menu-btn { display: block; }
+    .header-btn { display: none; }
+    
+    .hero-wrapper { padding: 100px 20px 40px 20px; }
+    .hero-container { flex-direction: column; gap: 40px; }
+    .hero-card { max-width: 100%; margin: 0; padding: 0; }
+    .hero-photo-gradient { width: 100%; min-height: 350px; height: 350px; }
+    .hero-img-overlay { background: linear-gradient(to bottom, var(--bg-color) 0%, transparent 40%); }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team { grid-template-columns: repeat(1, 1fr); }
+    .section { padding: 60px 20px; }
+    .salon-section { flex-direction: column; }
+    .salon-content { padding: 40px 20px; }
+    .offer-grid { grid-template-columns: 1fr; }
+    .price-person { padding: 20px; }
+}

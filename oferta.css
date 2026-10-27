@@ -1,0 +1,459 @@
+/* ==========================================================================
+   TINALY BEAUTY — OFERTA ŚLUBNA (STYLE CSS)
+   ========================================================================== */
+
+:root {
+    --bg-color: #f9f8f6;
+    --text-color: #2c2c2c;
+    --accent: #ad896e;
+    --accent-light: #f3efe9;
+    --border-color: #e5e0db;
+    --white: #ffffff;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   HEADER / NAWIGACJA
+   ========================================================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(249, 248, 246, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tinaly img {
+    height: 35px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.wedding-nav-link {
+    color: var(--accent);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--accent);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    border: 1px solid var(--accent);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-color);
+    color: var(--white);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* ==========================================================================
+   HERO / BANER GŁÓWNY OFERTY ŚLUBNEJ
+   ========================================================================== */
+
+.wedding-hero {
+    position: relative;
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 140px 20px 80px 20px;
+    background: linear-gradient(rgba(249, 248, 246, 0.85), rgba(249, 248, 246, 0.92)), url('angelika.jpg') center/cover no-repeat;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.wedding-hero-content {
+    max-width: 800px;
+}
+
+.wedding-hero .small-title {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.wedding-hero h1 {
+    font-family: var(--font-serif);
+    font-size: 3.8rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.wedding-hero p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   SEKCJE & NAGŁÓWKI
+   ========================================================================== */
+
+.section {
+    padding: 90px 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section-heading div {
+    width: 40px;
+    height: 1px;
+    background-color: var(--accent);
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   PAKIETY ŚLUBNE (PODSTAWOWY & KOMPLEKSOWY)
+   ========================================================================== */
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.package-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.package-card.highlight {
+    border: 2px solid var(--accent);
+    background: var(--accent-light);
+}
+
+.package-card .badge {
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    padding: 6px 16px;
+    font-weight: 600;
+}
+
+.package-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.package-header h3 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.package-price {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.package-features {
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.package-features li {
+    font-size: 0.95rem;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.package-features li::before {
+    content: "🤍";
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   USŁUGI POJEDYNCZE / MAKIJAŻ ŚLUBNY
+   ========================================================================== */
+
+.single-services {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.single-services h3 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 0.95rem;
+}
+
+.service-item strong {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   HARMONOGRAM PRZYGOTOWAŃ ŚLUBNYCH (TIMELINE)
+   ========================================================================== */
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-step {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.timeline-time {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--accent);
+    min-width: 130px;
+    font-weight: 600;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+    background-color: #242424;
+    color: var(--white);
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+footer p {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+
+footer div {
+    display: flex;
+    gap: 25px;
+}
+
+footer div a {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+/* ==========================================================================
+   RESPONSYWNOŚĆ (EKRANY MOBILNE I TABLETY)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 20px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .wedding-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    .single-services {
+        padding: 25px;
+    }
+
+    .timeline-step {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .timeline-time {
+        min-width: auto;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+}
