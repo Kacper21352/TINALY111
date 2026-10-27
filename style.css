@@ -28,8 +28,8 @@ nav a { font-size: 0.85rem; font-weight: 500; letter-spacing: 1px; color: var(--
 nav a:hover, nav a.active { color: var(--accent); }
 
 .btn {
-    display: inline-block; padding: 12px 28px; background-color: var(--accent); color: var(--white);
-    font-size: 0.8rem; font-weight: 500; letter-spacing: 1.5px; border: 1px solid var(--accent);
+    display: inline-block; padding: 14px 32px; background-color: var(--accent); color: var(--white);
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 1.5px; border: 1px solid var(--accent);
     transition: all 0.3s ease; cursor: pointer; text-align: center;
 }
 .btn:hover { background-color: transparent; color: var(--accent); }
@@ -38,7 +38,7 @@ nav a:hover, nav a.active { color: var(--accent); }
 .btn-full { width: 100%; margin-top: 10px; }
 .menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-color); }
 
-/* HERO */
+/* SEKCJA HERO – POWIĘKSZONE NAPISY */
 .hero-wrapper {
     position: relative;
     min-height: 100vh;
@@ -61,8 +61,8 @@ nav a:hover, nav a.active { color: var(--accent); }
 }
 
 .hero-card {
-    flex: 1;
-    max-width: 520px;
+    flex: 1.1;
+    max-width: 620px; /* Zwiększona szerokość karty tekstowej */
     z-index: 2;
     margin: auto 0;
     padding: 40px 0;
@@ -70,57 +70,57 @@ nav a:hover, nav a.active { color: var(--accent); }
 
 .hero-card h1 {
     font-family: var(--font-serif);
-    font-size: 3.5rem;
+    font-size: 4.4rem; /* Powiększony nagłówek */
     font-weight: 400;
-    line-height: 1.15;
-    margin: 15px 0;
+    line-height: 1.12;
+    margin: 18px 0;
 }
 
 .hero-line {
-    width: 45px;
-    height: 1px;
+    width: 55px;
+    height: 2px;
     background-color: var(--accent);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .small-title {
-    font-size: 0.8rem;
-    letter-spacing: 3px;
+    font-size: 0.95rem; /* Powiększony podtytuł */
+    letter-spacing: 3.5px;
     color: var(--accent);
     font-weight: 600;
     display: block;
 }
 
 .hero-card p {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 12px;
+    font-size: 1.05rem; /* Powiększony tekst główny */
+    color: #444;
+    margin-bottom: 15px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
-    margin: 30px 0 35px 0;
+    gap: 18px;
+    margin: 35px 0 40px 0;
 }
 
 .benefits {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 22px;
     border-top: 1px solid var(--border-color);
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 .benefits div span {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: var(--accent);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     display: block;
 }
 
 .benefits div p {
-    font-size: 0.7rem;
-    letter-spacing: 1px;
+    font-size: 0.8rem; /* Powiększone ikony cech */
+    letter-spacing: 1.2px;
     font-weight: 600;
     color: var(--text-color);
 }
@@ -185,14 +185,52 @@ nav a:hover, nav a.active { color: var(--accent); }
 .offer-box h3 { font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 10px; font-weight: 500; }
 .offer-box p { font-size: 0.85rem; color: #666; }
 
-/* WNĘTRZE SALONU */
-.salon-section { display: flex; align-items: center; background-color: var(--accent-light); margin: 50px 0; }
-.salon-content { flex: 1; padding: 80px; }
-.salon-label { font-size: 0.75rem; letter-spacing: 2px; color: var(--accent); font-weight: 600; display: block; margin-bottom: 10px; }
-.salon-content h2 { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 400; line-height: 1.2; margin-bottom: 20px; }
-.salon-line { width: 40px; height: 1px; background-color: var(--accent); margin-bottom: 20px; }
-.salon-photo { flex: 1; }
-.salon-photo img { width: 100%; height: 450px; object-fit: cover; }
+/* WNĘTRZE SALONU – POWIĘKSZONE ZDJĘCIE (BEZ UCIĘCIA) ORAZ NAPISY */
+.salon-section { 
+    display: flex; 
+    align-items: center; 
+    background-color: var(--accent-light); 
+    margin: 60px 0; 
+}
+.salon-content { 
+    flex: 1; 
+    padding: 80px; 
+}
+.salon-label { 
+    font-size: 0.9rem; 
+    letter-spacing: 2.5px; 
+    color: var(--accent); 
+    font-weight: 600; 
+    display: block; 
+    margin-bottom: 12px; 
+}
+.salon-content h2 { 
+    font-family: var(--font-serif); 
+    font-size: 3.5rem; /* Powiększony nagłówek "Poznaj nasze miejsce" */
+    font-weight: 400; 
+    line-height: 1.15; 
+    margin-bottom: 25px; 
+}
+.salon-line { 
+    width: 50px; 
+    height: 2px; 
+    background-color: var(--accent); 
+    margin-bottom: 25px; 
+}
+.salon-content p {
+    font-size: 1.1rem; /* Powiększony opis */
+    color: #444;
+}
+.salon-photo { 
+    flex: 1.2; /* Większa przestrzeń na zdjęcie */
+    overflow: hidden;
+}
+.salon-photo img { 
+    width: 100%; 
+    height: 560px; 
+    object-fit: cover; 
+    object-position: center 35%; /* Ustawia kadr precyzyjnie pomiędzy górą a środkiem */
+}
 
 /* CENNIK */
 .prices { max-width: 900px; }
@@ -205,7 +243,7 @@ nav a:hover, nav a.active { color: var(--accent); }
 .price-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--border-color); font-size: 0.9rem; }
 .price-row strong { font-weight: 500; color: var(--text-color); }
 
-/* NOWA SEKCJA KONTAKT, MAPA I FORMULARZ ZAPISU */
+/* SEKCJA KONTAKT, MAPA I FORMULARZ ZAPISU */
 .contact-map-section { background-color: var(--white); border-top: 1px solid var(--border-color); }
 .contact-grid {
     display: grid;
@@ -351,14 +389,16 @@ footer div a { font-size: 0.75rem; letter-spacing: 1px; color: #ccc; transition:
     .hero-photo-gradient { width: 100%; min-height: 350px; height: 350px; }
     .hero-img-overlay { background: linear-gradient(to bottom, var(--bg-color) 0%, transparent 40%); }
     
+    .salon-section { flex-direction: column; }
+    .salon-content { padding: 40px 20px; }
+    .salon-photo img { height: 350px; }
+    
     .contact-grid {
         grid-template-columns: 1fr;
     }
     
     .team { grid-template-columns: repeat(1, 1fr); }
     .section { padding: 60px 20px; }
-    .salon-section { flex-direction: column; }
-    .salon-content { padding: 40px 20px; }
     .offer-grid { grid-template-columns: 1fr; }
     .price-person { padding: 20px; }
 }
